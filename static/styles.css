@@ -6,8 +6,6 @@
 .body{
     background-image: linear-gradient(rgb(87, 87, 87), rgb(12, 12, 12));
     min-height: 100vh;
-    position: relative;
-    overflow:hidden;
 }
 
 .app-container {
@@ -19,6 +17,7 @@
     padding: 20px;
     box-sizing: border-box;
     position:fixed;
+    
 }
 
 .logo-container {
@@ -28,6 +27,8 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 50px;
+
+    
 }
 
 .spotify-logo {
