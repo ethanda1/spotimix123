@@ -25,7 +25,6 @@ sp_oauth = SpotifyOAuth(
 #https://spotimix123.onrender.com/callback = redirect_uri 
 
 client = Anthropic(api_key=os.getenv('ANT_API_KEY'))
-
 @app.route("/", methods=["GET", "POST"])
 def index():
     is_session = session.get('token_info') is not None
@@ -167,7 +166,7 @@ def create_playlist():
         token_info = sp_oauth.refresh_access_token(token_info['refresh_token'])
     session['token_info'] = token_info
     title = request.args.get('title')
-    title = request.form['title']
+    title = request.form['title'] 
     sp = spotipy.Spotify(auth=token_info['access_token'])
     user_id = sp.current_user()['id']
     song_ids = request.form.getlist('song_ids')

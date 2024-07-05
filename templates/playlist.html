@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container min-h-screen bg-gradient-to-b from-{{word[1]}}-600 to-{{word[2]}}-600">
-    <div>
-    <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post"></form>
+<div class="container min-w-screen min-h-screen overflow-auto bg-gradient-to-b from-{{word[1]}}-600 to-{{word[2]}}-500">
+    <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post">
     <div class = 'flex'>
     <h1 class = 'playlist-title text-lg font-bold'>
         your {{word[0]}} playlist
@@ -62,6 +61,4 @@
         </div>
     </form>
 </div>
-</div>
 {% endblock content %}
-
