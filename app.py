@@ -22,7 +22,7 @@ sp_oauth = SpotifyOAuth(
     scope='playlist-modify-public user-top-read'
 )
 
-client = Anthropic(api_key='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')
+client = Anthropic(api_key='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')
 
 @app.route("/", methods=["GET", "POST"])
 def index():
