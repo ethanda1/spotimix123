@@ -237,14 +237,33 @@
 }
 
 @media screen and (max-width: 768px) {
-    .song-content {
-        display: block;
-    }
-}
-@media screen and (max-width: 768px) {
     .song {
-        grid-template-rows: minmax(0px, 1fr) minmax(0px, 30px) minmax(0px, 1fr);
+        grid-template-columns: auto 1fr;
         gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .song-content {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .song img {
+        grid-row: span 2;
+    }
+
+    .song-details {
+        grid-column: 2;
+    }
+
+    .song-details h2 {
+        font-size: 16px;
+        margin-bottom: 2px;
     }
 
     .song-extra {
@@ -253,5 +272,36 @@
 
     .labels {
         display: none;
+    }
+
+    .prompt-input {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .playlister {
+        padding: 8px 16px;
+    }
+
+    .playlister input[type="submit"] {
+        font-size: 14px;
+    }
+
+    .playlister img {
+        height: 20px;
+    }
+
+    .spotify-login-button {
+        width: 150px;
+        height: 60px;
+        font-size: medium;
+    }
+
+    .spotify-login-button img {
+        width: 40px;
     }
 }

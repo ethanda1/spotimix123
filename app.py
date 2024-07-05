@@ -18,11 +18,11 @@ app.config['SECRET_KEY'] = os.urandom(64)
 sp_oauth = SpotifyOAuth(
     client_id=os.getenv('SPOTIPY_CLIENT_ID'),
     client_secret=os.getenv('SPOTIPY_CLIENT_SECRET'),
-    redirect_uri='https://spotimix123.onrender.com/callback',
+    redirect_uri='https://spotimix123/onrender.com/callback',
     scope='playlist-modify-public user-top-read'
 )
 
-client = Anthropic(api_key=os.getenv('ANT_API_KEY'))
+client = Anthropic(api_key=os.getenv('ANT_API_KEY')
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -41,7 +41,7 @@ def playlist():
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
     prompt = request.args.get('prompt')
     message = client.messages.create(
-        model='claude-3-5-sonnet-20240620',
+        model='claude-3-haiku-20240307',
         max_tokens=4096,
         tools=[
             {
