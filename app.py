@@ -10,6 +10,8 @@ from wtforms import StringField, SubmitField, SelectField, TextAreaField
 from datetime import datetime
 
 app = Flask(__name__)
+env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+app.config.from_object(env_config)
 CORS(app)
 app.config['SECRET_KEY'] = os.urandom(64)
 
