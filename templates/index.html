@@ -6,9 +6,6 @@
 
         <form class="prompt-form" action="{{ url_for('process_form') }}" method="POST">
             {% if is_session %}
-            <p>
-                automatically generate a Spotify playlist based on what you want
-            </p>
             <input id = "prompt" class="prompt-input" type="text" name="prompt" placeholder="Make me a indie playlist for a long roadtrip">
             <input class="submit-button" type="submit" value="generate playlist">
             {% else %}
