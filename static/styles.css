@@ -7,6 +7,7 @@
     background-image: linear-gradient(rgb(87, 87, 87), rgb(12, 12, 12));
     min-height: 100vh;
     position: relative;
+    overflow:hidden;
 }
 
 .app-container {
@@ -17,6 +18,7 @@
     min-height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
+    position:fixed;
 }
 
 .logo-container {
@@ -30,9 +32,11 @@
 
 .spotify-logo {
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     height: auto;
     display: block;
+    pointer-events: none;
+    user-select: none;
 }
 
 .prompt-form {
