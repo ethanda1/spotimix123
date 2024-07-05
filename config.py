@@ -12,5 +12,3 @@ class DevelopmentConfig(Config):
  DEVELOPMENT = True
  TEMPLATES_AUTO_RELOAD = True
  ASSETS_DEBUG = True
-
- api_key = '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'
