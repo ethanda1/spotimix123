@@ -24,7 +24,7 @@ sp_oauth = SpotifyOAuth(
 #http://localhost:5000/callback = redirect_uri host
 #https://spotimix123.onrender.com/callback = redirect_uri 
 
-client = Anthropic(api_key='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')
+client = Anthropic(api_key=os.getenv('ANT_API_KEY'))
 
 @app.route("/", methods=["GET", "POST"])
 def index():
