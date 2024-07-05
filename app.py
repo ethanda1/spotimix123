@@ -8,7 +8,6 @@ from flask_cors import CORS
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, TextAreaField
 from datetime import datetime
-from config import api_key
 
 app = Flask(__name__)
 env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
