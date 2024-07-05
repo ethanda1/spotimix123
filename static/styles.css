@@ -6,6 +6,8 @@
 .body{
     background-image: linear-gradient(rgb(87, 87, 87), rgb(12, 12, 12));
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .app-container {
