@@ -228,7 +228,7 @@
 
 .author{
     color:aliceblue;
-    position: absolute;
+    position: fixed;
     left:5px;
     bottom:5px;
 }
@@ -243,12 +243,8 @@
 }
 @media screen and (max-width: 768px) {
     .song {
-        grid-template-columns: minmax(0px, 30px) minmax(0px, 1fr);
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 30px) minmax(0px, 1fr);
         gap: 10px;
-    }
-
-    .song img {
-        display: none;
     }
 
     .song-extra {
