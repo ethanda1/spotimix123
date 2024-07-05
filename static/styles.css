@@ -6,6 +6,7 @@
 .body{
     background-image: linear-gradient(rgb(87, 87, 87), rgb(12, 12, 12));
     min-height: 100vh;
+    position: relative;
 }
 
 .app-container {
@@ -218,5 +219,11 @@
 .spotify-login-button:hover{
     background-color: #e6ffe3;
     transition: background-color 0.5s ease;
+}
 
+.author{
+    color:aliceblue;
+    position: absolute;
+    left:5px;
+    bottom:5px;
 }
