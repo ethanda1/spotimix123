@@ -86,29 +86,33 @@
     padding: 0px 20px 20px 20px;
     text-decoration:none;
     color: gainsboro;
+    user-select: none;
+    cursor: pointer;
 }
 
 .song {
     display: grid;
-    grid-template-columns: minmax(0px, 5px) minmax(0px, 5px) minmax(0px, 500px) minmax(0px, 1fr);
+    grid-template-columns: minmax(0px, 50px) minmax(0px, 50px) minmax(0px, 1fr) minmax(0px, 1fr);
+    gap:0 20px;
     align-items: center;
-    gap: 50px;
     width: 100%;
     margin-bottom: -20px;
     padding: 10px;
     border-radius: 10px;
-
+    cursor: pointer;
+    user-select: none;
 }
+
+
 
 .song img {
     max-width: 50px;
-    margin-right: 20px;
     border-radius: 10px;
 }
 
 .song-details {
     width:100%;
-    max-width: 400px;
+    max-width: 30%;
 }
 .song-details h2 {
     font-size: 18px;
@@ -131,26 +135,24 @@
     padding-left: 20px;
 }
 
-.main:hover{
-    background-color: #8d8d8d;
-    box-shadow: 0 4px 8px rgba(136, 136, 136, 0.1);
-    cursor:default;
-    user-select: none;
-}
-
-.labels{
+.labels {
+    display: grid;
+    grid-template-columns: minmax(0px, 50px) minmax(0px, 50px) minmax(0px, 1fr) minmax(0px, 1fr);
+    gap:0 20px;
     padding-left: 30px;
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid gainsboro;
     border-radius: 0;
     color: gainsboro;
     margin-bottom: 20px;
     user-select: none;
     cursor: pointer;
 }
+.labels .song-extra{
+    padding-right:20px;
 
+}
 .timer{
     width: 50%;
-    padding-top: 15px;
     align-items: center;
     justify-content: center;
     background-color: 'grey';
@@ -236,7 +238,8 @@
     display: contents;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+
     .song {
         grid-template-columns: auto 1fr;
         gap: 10px;
@@ -244,6 +247,9 @@
         justify-content: center;
     }
 
+    .track-number{
+        display: none;
+    }
 
     .song-content {
         grid-column: 2;
@@ -259,6 +265,8 @@
 
     .song-details {
         grid-column: 2;
+        width: 100%;
+        max-width: 100%;
     }
 
     .song-details h2 {
@@ -304,4 +312,55 @@
     .spotify-login-button img {
         width: 40px;
     }
+    .title{
+        margin-left: 35px;
+    }
+    .playlist-title{
+        margin-top: 30px;
+        max-width: 100%;
+    }
 }
+.title{
+    display: b;
+    background: transparent;
+    font-size: xx-large;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gainsboro;
+    color:gainsboro;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom:7px;
+}
+
+.title::placeholder{
+    color: gainsboro;
+    padding-bottom:7px;
+}
+
+.title:focus {
+    outline: none;
+    border-bottom: 1px solid gainsboro;
+    color: gainsboro;
+}
+
+.playlist-title{
+    color: gainsboro;
+    margin-left: 40px;
+    width:100%;
+    max-width: 35%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.playlist-title{
+    font:bold;
+}
+

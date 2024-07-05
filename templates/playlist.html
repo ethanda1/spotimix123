@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <div class="song labels">
+<div class="container min-w-screen min-h-screen overflow-auto bg-gradient-to-b from-{{word[1]}}-600 to-{{word[2]}}-500">
+    <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post"></form>
+    <div class = 'flex'>
+    <h1 class = 'playlist-title text-lg font-bold'>
+        your {{word[0]}} playlist
+    </h1>
+    <input type="text" name = "title" placeholder= "playlist title" onfocus="this.placeholder = ''"
+    onblur="this.placeholder = 'playlist title'" class = 'title'>
+         
+    </div>
+    <div class="song labels cursor-default">
         <div class="track-number">
             #
         </div>
@@ -16,11 +25,11 @@
             <img src="../static/images/timer-icon-15.png" class="timer">
         </div>
     </div>
-    <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post">
+
         <input type="hidden" name="prompt" value="{{ prompt }}">
-                {% for song, details in song_dict.items() %}
+        {% for song, details in song_dict.items() %}
         <a href="{{ details[6] }}" class="songs-container">
-            <div class="song main">
+            <div class="song main bg-black bg-opacity-0 hover:bg-opacity-10 cursor-default ">
                 <div class="track-number">
                     {{ details[5] }}
                 </div>
@@ -47,9 +56,10 @@
         <div class="playlister-container">
             <div class="playlister">
                 <input type="submit" value="Add playlist to">
-                <img src="../static/images/Spotify_logo_without_text.svg.png">
+                <img src="../static/images/Spotify_logo_without_text.svg.png" class = "playlister-logo">
             </div>
         </div>
     </form>
 </div>
 {% endblock content %}
+
