@@ -232,3 +232,34 @@
     left:5px;
     bottom:5px;
 }
+.song-content {
+    display: contents;
+}
+
+@media screen and (max-width: 768px) {
+    .song-content {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    .song {
+        grid-template-columns: minmax(0px, 30px) minmax(0px, 1fr);
+        gap: 10px;
+    }
+
+    .song img {
+        display: none;
+    }
+
+    .song-extra {
+        display: none;
+    }
+
+    .song-details p {
+        display: none;
+    }
+
+    .labels {
+        display: none;
+    }
+}

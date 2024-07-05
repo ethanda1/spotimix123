@@ -18,25 +18,27 @@
     </div>
     <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post">
         <input type="hidden" name="prompt" value="{{ prompt }}">
-        {% for song, details in song_dict.items() %}
+                {% for song, details in song_dict.items() %}
         <a href="{{ details[6] }}" class="songs-container">
             <div class="song main">
                 <div class="track-number">
                     {{ details[5] }}
                 </div>
-                {% if details[1] %}
-                <img src="{{ details[1] }}" alt="Album cover for {{ song }}" width="200">
-                {% else %}
-                <p>No image available</p>
-                {% endif %}
-                <div class="song-details">
-                    <h2>{{ song }}</h2>
-                    <p>{{ details[0] }}</p>
-                </div>
-                <div class="song-extra">
-                    <p>{{ details[2] }}</p>
-                    <p>{{ details[3] }}</p>
-                    <p>{{ details[4] }}</p>
+                <div class="song-content">
+                    {% if details[1] %}
+                    <img src="{{ details[1] }}" alt="Album cover for {{ song }}" width="200">
+                    {% else %}
+                    <p>No image available</p>
+                    {% endif %}
+                    <div class="song-details">
+                        <h2>{{ song }}</h2>
+                        <p>{{ details[0] }}</p>
+                    </div>
+                    <div class="song-extra">
+                        <p>{{ details[2] }}</p>
+                        <p>{{ details[3] }}</p>
+                        <p>{{ details[4] }}</p>
+                    </div>
                 </div>
             </div>
         </a>
