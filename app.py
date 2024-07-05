@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = os.urandom(64)
 sp_oauth = SpotifyOAuth(
     client_id=os.getenv('SPOTIPY_CLIENT_ID'),
     client_secret=os.getenv('SPOTIPY_CLIENT_SECRET'),
-    redirect_uri='http://localhost:5000/callback',
+    redirect_uri='https://spotimix123.onrender.com/callback',
     scope='playlist-modify-public user-top-read'
 )
 #http://localhost:5000/callback = redirect_uri host
