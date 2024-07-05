@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="song labels">
+        <div class="track-number">
+            #
+        </div>
+        <div>
+        </div>
+        <div class="song-details">
+            Title
+        </div>
+        <div class="song-extra">
+            <p>Album</p>
+            <p>Release date</p>
+            <img src="../static/images/timer-icon-15.png" class="timer">
+        </div>
+    </div>
+    <form id="playlistForm" action="{{ url_for('create_playlist') }}" method="post">
+        <input type="hidden" name="prompt" value="{{ prompt }}">
+        {% for song, details in song_dict.items() %}
+        <a href="{{ details[6] }}" class="songs-container">
+            <div class="song main">
+                <div class="track-number">
+                    {{ details[5] }}
+                </div>
+                {% if details[1] %}
+                <img src="{{ details[1] }}" alt="Album cover for {{ song }}" width="200">
+                {% else %}
+                <p>No image available</p>
+                {% endif %}
+                <div class="song-details">
+                    <h2>{{ song }}</h2>
+                    <p>{{ details[0] }}</p>
+                </div>
+                <div class="song-extra">
+                    <p>{{ details[2] }}</p>
+                    <p>{{ details[3] }}</p>
+                    <p>{{ details[4] }}</p>
+                </div>
+            </div>
+        </a>
+        <input type="hidden" name="song_ids" value="{{ details[7] }}">
+        {% endfor %}
+        <div class="playlister-container">
+            <div class="playlister">
+                <input type="submit" value="Add playlist to">
+                <img src="../static/images/Spotify_logo_without_text.svg.png">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="app-container">
+    <div class="logo-container">
+        <img class="spotify-logo" src="{{ url_for('static', filename='images/loho.png') }}" alt="Spotify logo">
+        <form class="prompt-form" action="{{ url_for('process_form') }}" method="POST">
+            {% if is_session %}
+            <input id = "prompt" class="prompt-input" type="text" name="prompt" placeholder="Make me a indie playlist for a long roadtrip">
+            <input class="submit-button" type="submit" value="generate playlist">
+            {% else %}
+            <a href="{{ url_for('authorize') }}" class="spotify-login-button">login with <img src="../static/images/Spotify_logo_without_text.svg.png"></a>
+            {% endif %}
+            
+        </form>
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('prompt');
+    const placeholders = ['Make a energic rap playlist with mostly Drake and Lil Uzi', 'Beach vibes only 🏖️🎵', 'Romantic dinner for two playlist', 'Time machine: 90s hip-hop', 'Make me a indie playlist for a long roadtrip'];
+    let index = 0;
+    function animatePlaceholder() {
+    input.placeholder = placeholders[index];
+    index = (index + 1) % placeholders.length;
+    }
+    setInterval(animatePlaceholder, 2000); 
+</script>
+
+{% endblock content %}

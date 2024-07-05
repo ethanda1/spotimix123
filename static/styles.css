@@ -1,0 +1,222 @@
+* {
+    font-family: "Flow-Circular", system-ui;
+    box-sizing: border-box; 
+}
+
+.body{
+    background-image: linear-gradient(rgb(87, 87, 87), rgb(12, 12, 12));
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.spotify-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+.prompt-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.prompt-input {
+    width: 100%;
+    max-width: 800px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 100%;
+    max-width: 200px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    height: 50px;
+    font-weight: bolder;
+    transition: background-color 0.5s ease;
+    
+}
+
+.submit-button:hover {
+    background-color: #1ed760;  
+    transition: background-color 0.5s ease;
+}
+
+.songs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 20px 20px;
+    text-decoration:none;
+    color: gainsboro;
+}
+
+.song {
+    display: grid;
+    grid-template-columns: minmax(0px, 5px) minmax(0px, 5px) minmax(0px, 500px) minmax(0px, 1fr);
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin-bottom: -20px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.song img {
+    max-width: 50px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.song-details {
+    width:100%;
+    max-width: 400px;
+}
+.song-details h2 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: white;
+}
+
+.song-details p {
+    margin: 0;
+}
+
+.song-extra {
+    display: grid;
+    grid-template-columns: minmax(0px, 500px) minmax(0px, 500px) minmax(0px, 50px);
+    gap: 0 50px;
+}
+
+
+.track-number{
+    padding-left: 20px;
+}
+
+.main:hover{
+    background-color: #8d8d8d;
+    box-shadow: 0 4px 8px rgba(136, 136, 136, 0.1);
+    cursor:default;
+    user-select: none;
+}
+
+.labels{
+    padding-left: 30px;
+    border-bottom: 1px solid #888;
+    border-radius: 0;
+    color: gainsboro;
+    margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.timer{
+    width: 50%;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: 'grey';
+}
+
+.playlister {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1DB954;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.playlister:hover {
+    background-color: #1ed760;
+}
+
+.playlister input[type="submit"] {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+}
+
+.playlister img {
+    height: 24px; 
+    width: auto;
+}
+
+.playlister img {
+    height: 24px;  
+    margin-left: 10px;  
+}
+
+.playlister-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+    margin-bottom:75px;
+}
+
+.spotify-login-button{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    width: 175px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #adffca;
+    font-size: large;
+    transition: background-color 0.5s ease;
+}
+
+.spotify-login-button img{
+    width:50px;
+    padding-left: 10px;
+}
+
+.spotify-login-button:hover{
+    background-color: #e6ffe3;
+    transition: background-color 0.5s ease;
+
+}
